@@ -1,10 +1,9 @@
 import { View, Text, StyleSheet } from 'react-native';
 import React from 'react';
-import questions from '../../data/questions';
 
-const question = questions.items[1];
 
-export default function QuestionListItem() {
+
+export default function QuestionListItem({question}) {
     return (
         <View style={styles.container}>
             <Text style={styles.stat}>{question.score} votes · {question.answer_count} answers · {question.view_count} views</Text>
